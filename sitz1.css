@@ -1,0 +1,118 @@
+body {
+  background-image: url("F1/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0; /* Дополнительно: убираем padding */
+}
+
+h1 {
+  color: white;
+  font-size: 32pt;
+  text-align: center;
+  margin: 20px 0; /* Отступы сверху/снизу для воздуха */
+}
+
+.Профессор {
+  margin-left: 80px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+}
+
+.Универ, .СибУПК, .my-resume {
+  color: white;
+  font-size: 20pt;
+  /* Убираем жёсткие margin-top/margin-left — они ломают вёрстку на мобилках */
+  margin: 10px 0; /* Вертикальные отступы */
+  /* Горизонтальное позиционирование переложим на родительский контейнер */
+}
+
+.text-with-border {
+  border: 2px solid #ff5733;
+  padding: 15px;
+  background-color: transparent;
+  border-radius: 8px;
+  /* Заменяем жёсткий margin-right на гибкие отступы */
+  margin: 10px auto; /* Центрируем, отступы сверху/снизу 10px */
+  max-width: 80%; /* Не шире 80% экрана */
+}
+
+.btn-read-more {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #1e88e5;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 10px auto; /* Центрируем кнопку */
+  display: block; /* Чтобы margin: auto работал */
+}
+
+.btn-read-more:hover {
+  background-color: #0d47a1;
+  transform: scale(1.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* АДАПТИВНЫЕ СТИЛИ */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24pt; /* Уменьшаем заголовок для мобилок */
+  }
+
+  .Профессор {
+    margin-left: 10px; /* Меньше отступ слева */
+    width: 180px;     /* Немного уменьшаем размер */
+    height: 180px;
+  }
+
+  .Универ, .СибУПК, .my-resume {
+    font-size: 18pt; /* Чуть меньше текст */
+    margin: 5px 0;  /* Меньше отступы */
+  }
+
+  .text-with-border {
+    padding: 10px;      /* Меньше внутренние отступы */
+    max-width: 90%;   /* Почти на всю ширину экрана */
+    margin: 5px auto; /* Меньше внешние отступы */
+  }
+
+  .btn-read-more {
+    padding: 6px 12px;  /* Меньше отступы внутри кнопки */
+    font-size: 13px;  /* Чуть меньше текст */
+    margin: 5px auto;   /* Меньше отступы */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20pt; /* Ещё меньше заголовок */
+  }
+
+  .Профессор {
+    margin-left: 5px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .Универ, .СибУПК, .my-resume {
+    font-size: 16pt;
+  }
+
+  .text-with-border {
+    padding: 8px;
+    max-width: 95%;
+  }
+
+  .btn-read-more {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
